@@ -7,6 +7,5 @@ export default function AdoptionForm (props) {
 
     </div>
   );
-
 }
 
