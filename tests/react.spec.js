@@ -50,14 +50,14 @@ describe('React', () => {
     // has state
     //
 
-    xit('has a `petToAdopt` field on its state', () => {
+    it('has a `petToAdopt` field on its state', () => {
 
       // ShallowWrapper.state() gives us the current `this.state` of the component
       expect(adoptionAgency.state().petToAdopt).to.exist;
 
     });
 
-    xit('has a `petToAdopt` field initialized to be an empty object', () => {
+    it('has a `petToAdopt` field initialized to be an empty object', () => {
 
       expect(adoptionAgency.state().petToAdopt).to.be.an('object');
 
@@ -67,7 +67,7 @@ describe('React', () => {
     // has methods
     //
 
-    xit('has a method called `adoptPet`, which takes a pet and sets it as the `petToAdopt` on state', () => {
+    it('has a method called `adoptPet`, which takes a pet and sets it as the `petToAdopt` on state', () => {
 
       const pet = { name: 'Cody', imgUrl: 'cody.png' };
 
@@ -78,7 +78,7 @@ describe('React', () => {
 
     });
 
-    xit('binds the `adoptPet` method to the context of the component', () => {
+    it('binds the `adoptPet` method to the context of the component', () => {
 
       expect(adoptionAgency.instance().adoptPet.hasOwnProperty('prototype')).to.be.false;
 
@@ -88,7 +88,7 @@ describe('React', () => {
     // renders components
     //
 
-    xit('renders the name of the petToAdopt in an h3 tag', () => {
+    it('renders the name of the petToAdopt in an h3 tag', () => {
 
       const pet = { name: 'Cody', imgUrl: 'cody.png' };
       adoptionAgency.setState({ petToAdopt: pet });
@@ -97,7 +97,7 @@ describe('React', () => {
 
     });
 
-    xit('renders two <PetPreview /> components (one for dogs and one for cats)', () => {
+    it('renders two <PetPreview /> components (one for dogs and one for cats)', () => {
 
       expect(adoptionAgency.find(PetPreview).length).to.be.equal(2);
 
@@ -107,19 +107,19 @@ describe('React', () => {
     // passes props
     //
 
-    xit('passes a prop called `pets` with the list of dogs to one of the <PetPreview /> components', () => {
+    it('passes a prop called `pets` with the list of dogs to one of the <PetPreview /> components', () => {
 
       expect(adoptionAgency.find('#dogs').find(PetPreview).props().pets).to.be.deep.equal(DOGS);
 
     });
 
-    xit('passes a prop called `pets` with the list of cats the other <PetPreview /> component', () => {
+    it('passes a prop called `pets` with the list of cats the other <PetPreview /> component', () => {
 
       expect(adoptionAgency.find('#cats').find(PetPreview).props().pets).to.be.deep.equal(CATS);
 
     });
 
-    xit('passes the `adoptPet` method to each <PetPreview/> component as a prop called `adoptPet`', () => {
+    it('passes the `adoptPet` method to each <PetPreview/> component as a prop called `adoptPet`', () => {
 
       expect(adoptionAgency.find('#dogs').find(PetPreview).props().adoptPet)
         .to
