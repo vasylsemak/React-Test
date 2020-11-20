@@ -1,6 +1,11 @@
 # React Exercise
 
+### `npm run build`
+
+### In your browser, navigate to http://localhost:8080/
+
 ## Complete the application
+
 We're going to create an application for a pet adoption agency.
 This agency has dogs and cats that need a good home!
 Users will be able to select a dog or a cat from a dropdown list and see a preview of the selected dog or cat.
@@ -25,13 +30,13 @@ You can also view the app itself!
 ### About the test
 
 You will work in the following files:
+
 - AdoptionAgency.js
 - PetPreview.js
 - AdoptionForm.js
 
 You should not need to modify any other files.
 It is also not necessary to `import` or `export` anything other than what is already available.
-
 
 Here is what the app looks like at a glance:
 

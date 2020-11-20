@@ -8,16 +8,16 @@ export default class AdoptionAgency extends Component {
 
     this.state = {
       dogs: [
+        { name: 'Pandora', imgUrl: 'src/img/pandora.png' },
         { name: 'Taylor',  imgUrl: 'src/img/taylor.png'  },
         { name: 'Reggie',  imgUrl: 'src/img/reggie.png'  },
-        { name: 'Pandora', imgUrl: 'src/img/pandora.png' }
       ],
       cats: [
-        { name: 'Earl',    imgUrl: 'src/img/earl.png'   },
         { name: 'Winnie',  imgUrl: 'src/img/winnie.png' },
+        { name: 'Earl',    imgUrl: 'src/img/earl.png'   },
         { name: 'Fellini',  imgUrl: 'src/img/fellini.png' }
       ],
-      petToAdopt: { name: 'ME!!!!' }
+      petToAdopt: { name: 'ME !' }
     }
 
     this.adoptPet = this.adoptPet.bind(this);

@@ -7,12 +7,12 @@ export default function AdoptionForm (props) {
     <div>
       <select onChange={previewPet}>
       {
-        pets.map((p, idx) => (
-          <option key={p.name} >{p.name}</option>
+        pets.map(p => (
+          <option key={p.name}>{p.name}</option>
         ))
       }
       </select>
-      <button onClick={adoptSelectedPet}>ADOPT</button>
+      <button id='save-button' onClick={adoptSelectedPet}>ADOPT</button>
     </div>
   );
 }

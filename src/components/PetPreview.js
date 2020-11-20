@@ -10,6 +10,10 @@ export default class PetPreview extends Component {
     this.adoptSelectedPet = this.adoptSelectedPet.bind(this);
   }
 
+  componentDidMount() {
+    this.setState({ petToPreview: this.props.pets[0] });
+  }
+
   previewPet(evt) {
     const petName = evt.target.value;
     const selectedPet = this.props.pets.filter(p => p.name === petName)[0];
@@ -24,15 +28,15 @@ export default class PetPreview extends Component {
   render () {
     return (
       <div className="preview">
+        <div>
+          <h4>Preview:</h4>
+          <img src={this.state.petToPreview.imgUrl} />
+        </div>
         <AdoptionForm
           pets={this.props.pets}
           previewPet={this.previewPet}
           adoptSelectedPet={this.adoptSelectedPet}
          />
-        <div>
-          <h5>Preview:</h5>
-          <img src={this.state.petToPreview.imgUrl} />
-        </div>
       </div>
     );
   }

@@ -1,35 +1,67 @@
 * {
+  text-align: center;
   box-sizing: border-box;
+  background: rgb(255, 227, 231);
 }
 
-.clearfix &:after {
+.clearfix {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.clearfix :after {
   content: '';
   display: table;
-  clear:both;
+  clear: both;
 }
 
 body {
-  font-family: "Helvetica Neue";
+  font-family: 'Helvetica Neue';
   font-weight: 100;
 }
 
-h1, h2 {
-  margin-left: 50px;
-  font-weight: 100;
+h1 {
+  color: rgb(0, 0, 158);
+  margin: 3% auto 1%;
+  font-weight: bold;
+  font-size: 5rem;
+}
+
+h3,
+.pname,
+select {
+  color: navy;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+select {
+  margin: 0.5rem auto 1rem;
+  font-size: 1.5rem;
+}
+
+h1,
+h3 {
   clear: both;
 }
 
 .block {
   width: 30vw;
-  float: left;
 }
 
 .preview {
   margin: 1.5vw;
 }
 
+img {
+  border: 6px double rgb(184, 183, 183);
+  border-radius: 10px;
+}
+
 #save-button {
   background: transparent;
+  border-radius: 5px;
   display: block;
   font-weight: bold;
   margin: 0 auto;
@@ -37,4 +69,9 @@ h1, h2 {
   font-size: 20px;
   margin-top: 20px;
   clear: both;
+}
+
+#save-button:hover {
+  border-width: 4px;
+  background-color: rgb(250, 171, 183);
 }

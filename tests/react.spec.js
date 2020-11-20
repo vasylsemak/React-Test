@@ -15,14 +15,14 @@ import PetPreview from '../src/components/PetPreview';
 describe('React', () => {
 
   const DOGS = [
+    { name: 'Pandora', imgUrl: 'src/img/pandora.png' },
     { name: 'Taylor',  imgUrl: 'src/img/taylor.png'  },
-    { name: 'Reggie',  imgUrl: 'src/img/reggie.png'  },
-    { name: 'Pandora', imgUrl: 'src/img/pandora.png' }
+    { name: 'Reggie',  imgUrl: 'src/img/reggie.png'  }
   ];
 
   const CATS = [
-    { name: 'Earl',    imgUrl: 'src/img/earl.png'   },
     { name: 'Winnie',  imgUrl: 'src/img/winnie.png' },
+    { name: 'Earl',    imgUrl: 'src/img/earl.png'   },
     { name: 'Fellini',  imgUrl: 'src/img/fellini.png' }
   ];
 
@@ -183,7 +183,7 @@ describe('React', () => {
       // Array.prototype.find may also come in handy here:
       // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
 
-      const event = { target: { value: 'Reggie' } };
+      const event = { target: { value: 'Taylor' } };
       const pet = DOGS[1];
 
       expect(petPreview.instance().previewPet).to.be.function;
