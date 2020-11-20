@@ -17,7 +17,7 @@ export default class AdoptionAgency extends Component {
         { name: 'Winnie',  imgUrl: 'src/img/winnie.png' },
         { name: 'Fellini',  imgUrl: 'src/img/fellini.png' }
       ],
-      petToAdopt: {}
+      petToAdopt: { name: 'ME!!!!' }
     }
 
     this.adoptPet = this.adoptPet.bind(this);
@@ -30,7 +30,7 @@ export default class AdoptionAgency extends Component {
   render () {
     return (
       <div>
-        <h1>Adoptr</h1>
+        <h1>Adopt</h1>
         <div className="clearfix">
           <h3>{`You are adopting: ${this.state.petToAdopt.name}`}</h3>
         </div>

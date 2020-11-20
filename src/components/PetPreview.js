@@ -22,10 +22,8 @@ export default class PetPreview extends Component {
   }
 
   render () {
-
     return (
       <div className="preview">
-
         <AdoptionForm
           pets={this.props.pets}
           previewPet={this.previewPet}
@@ -35,9 +33,7 @@ export default class PetPreview extends Component {
           <h5>Preview:</h5>
           <img src={this.state.petToPreview.imgUrl} />
         </div>
-
       </div>
     );
-
   }
 }
